@@ -1,0 +1,292 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    {% include "partials/header.html.twig" %}
+    <div class="slide" id="home">
+        <div class="wrapper">
+                <div class="content">
+                    <img src={{asset('images/logo-prestige-grand.png')}} alt="image du logo" id="gdlogo">
+                    <h4>L'union fait la force, le prestige fait la différence !</h4>
+                    <a href="#about"><button class="btn-dore">Découvrir</button></a>
+                    <a href="#member"><button class="btn-dore">Nous rejoindre</button></a>
+                </div>
+                <div class="dore">
+                    
+                </div>
+        </div>
+    </div>
+
+    <div class="slide" id="about">
+        <div class="blockTitle deg1">
+            <h2>Un Business Club c'est quoi ?</h2>
+            <div class="trait"></div>
+        </div>
+         <p style="width: 80%; margin:0 auto; margin-top: 30px">Au sein du prestige business club, nous valorisons <b>l’échange de compétences et la mise en avant de talents</b>.
+Nous invitons activement les membres de notre communautés à prendre la parole sur scène et à partager leurs connaissances et leurs expertises avec les autres entrepreneurs. <b> Mais pas que …. !</b> </p>
+        <div class="wrapper">
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+                <div class="card-content">Développez vos relations. </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="card-content">Développez votre business.</div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+                <div class="card-content">Offrez vous plus de visibilité.</div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+                <div class="card-content">Obtenez de bonnes recommandations.</div>
+            </div>
+        </div>
+
+        <div id="story" class="blockText deg2">
+            <div class="storytext">
+                <div class="blockTitle" style="display: inline">
+                    <h2 style="text-align: left">Qui somme-nous ?</h2>
+                    <div class="trait"></div>
+                </div>
+                <p> <b>Le plus grand moteur de l’action humaine a toujours été les valeurs spécifiques qui définissent l’humanité. C'est pourquoi nous avons choisi, selon nous, les plus nobles d'entre eux pour les représenter fièrement.</b></p>
+                <p>Explorez l'excellence de notre Business Club, une véritable référence pour les professionnels ambitieux. Plongez dans un univers de pouvoir et de réussite, où les opportunités se transforment en succès fulgurants. Rejoignez le prestigieux monde des entrepreneurs et des décideurs, où les connexions se tissent avec finesse et où les partenariats stratégiques se concrétisent. Faites partie de l'élite du monde des affaires et laissez notre Business Club être votre catalyseur vers de nouveaux sommets. Ensemble, nous représentons la puissance, l'innovation et l'excellence.</p>
+                <a href="#targetMissions"><button class="btn-dore">Nos actions</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="targetMissions"></div>
+    <div class="slide" id="missions">
+        <div class="badge">
+            <img src={{asset('images/badge.png')}} alt="">
+        </div>
+        <div class="blockTitle">
+            <h2>Nos missions</h2>
+            <div class="trait"></div>
+        </div>
+        <div class="actions">
+            <div class="missions-card">
+                <span class="step">01</span>
+                <div class="text-mission">
+                    <div class="deco"></div>
+                    <p>Invitation aux événements privés, découverte des établissements de prestige.</p>
+                </div>
+            </div>
+             <div class="missions-card">
+                <span class="step">02</span>
+                <div class="text-mission">
+                    <div class="deco"></div>
+                    <p>Développer votre réseau, créer des connexions, des collaborations, bénéficier de l’entraide.</p>
+                </div>
+            </div>
+             <div class="missions-card">
+                <span class="step">03</span>
+                <div class="text-mission">
+                    <div class="deco"></div>
+                    <p>Avantages et réductions chez nos partenaires, révervés aux membres.</p>
+                </div>
+            </div>
+             <div class="missions-card">
+                <span class="step">04</span>
+                <div class="text-mission">
+                    <div class="deco"></div>
+                    <p>Mise en avant auprès de nos collaborateurs et médias.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-bottom">
+            <p>
+                <li>Prestige business club est un lieu de rencontre pour les personnes qui présentent nos valeurs. Nous encourageons ces personnes à participer</li>
+                <li>Souvent, une seule rencontre suffit pour ressentir l’ambiance créée par les personnes impliquées.</li>
+                <li>Un excellent espace d'échange d'expériences, de contacts et de recommandations.</li>
+                <li>Un lieu de développement des affaires dans une ambiance de valeurs partagées.</li>
+                <li>Échange d’expériences et soutien mutuel aux entreprises.</li>
+                <li>Vous obtenez les recommandations dont vous avez besoin. Vous rencontrez des personnes qui motivent, inspirent et contribuent au développement de votre entreprise.</li>
+                <li>Vous développez votre entreprise, établissez des relations à long terme et améliorez vos compétences, tout cela grâce au réseautage !</li>
+                <li>Nous transformons les contacts en contrats.</li>
+                <li>Vous remplissez la déclaration d'adhésion, payez la cotisation annuelle, recevez une carte de club et l'utilisez immédiatement !</li>
+            </p>
+            <a href="#formules"><button class="btn-dore">Nos formules</button></a>
+        </div>
+    </div>
+
+    <div class="slide" id="missions-responsive">
+        {# <div class="badge">
+            <img src={{asset('images/badge.png')}} alt="">
+        </div> #}
+        <div class="blockTitle">
+            <h2>Nos missions</h2>
+            <div class="trait"></div>
+        </div>
+        <div class="actions-resp">
+            <div class="missions-card-resp">
+                <span class="step-resp">01</span>
+                <div class="text-mission-resp">
+                    <div class="deco-resp"></div>
+                    <p>Invitation aux événements privés, découverte des établissements de prestige.</p>
+                </div>
+            </div>
+            <div class="missions-card-resp">
+                <span class="step-resp">02</span>
+                <div class="text-mission-resp">
+                    <div class="deco-resp"></div>
+                    <p>Développer votre réseau, créer des connexions, des collaborations, bénéficier de l’entraide.</p>
+                </div>
+            </div><div class="missions-card-resp">
+                <span class="step-resp">03</span>
+                <div class="text-mission-resp">
+                    <div class="deco-resp"></div>
+                    <p>Avantages et réductions chez nos partenaires, révervés aux membres.</p>
+                </div>
+            </div><div class="missions-card-resp">
+                <span class="step-resp">04</span>
+                <div class="text-mission-resp">
+                    <div class="deco-resp"></div>
+                    <p>Mise en avant auprès de nos collaborateurs et médias.</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="text-bottom">
+            <p>
+                <li>Prestige business club est un lieu de rencontre pour les personnes qui présentent nos valeurs. Nous encourageons ces personnes à participer</li>
+                <li>Souvent, une seule rencontre suffit pour ressentir l’ambiance créée par les personnes impliquées.</li>
+                <li>Un excellent espace d'échange d'expériences, de contacts et de recommandations.</li>
+                <li>Un lieu de développement des affaires dans une ambiance de valeurs partagées.</li>
+                <li>Échange d’expériences et soutien mutuel aux entreprises.</li>
+                <li>Vous obtenez les recommandations dont vous avez besoin. Vous rencontrez des personnes qui motivent, inspirent et contribuent au développement de votre entreprise.</li>
+                <li>Vous développez votre entreprise, établissez des relations à long terme et améliorez vos compétences, tout cela grâce au réseautage !</li>
+                <li>Nous transformons les contacts en contrats.</li>
+                <li>Vous remplissez la déclaration d'adhésion, payez la cotisation annuelle, recevez une carte de club et l'utilisez immédiatement !</li>
+            </p>
+            <a href="#formules"><button class="btn-dore">Nos formules</button></a>
+        </div>
+    </div>
+
+
+
+    <div class="sep">
+        <div class="citation">
+            <p>Ensemble vers l'excellence et le succès !</p>
+        </div>
+    </div>
+
+    <div class="slide" id="formules">
+        <div class="blockTitle">
+            <h2>Nos formules</h2>
+            <div class="trait"></div>
+        </div>
+        <div class="wrapper" id="formule-container">
+            <div class="formule">
+                <img src="{{asset('images/platine.png')}}" alt="image gold" class="platine">
+                <h3>Argent</h3>
+                <div class="prix"><b>Member ship pour 1 an </b></div>
+                <div class="description"><p>
+                        <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès aux networking</li>
+                        <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès aux afterwork</li>
+                        <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Un accès aux dîner (50€)</li>
+                        <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès événements clubs business</li>
+                        <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Annuaire des membres</li>
+                </p></div>
+            </div>
+            <div class="formule">
+                <img src="{{asset('images/platine.png')}}" alt="image gold" class="platine">
+                <h3 style="font-size: 26pt">Platine</h3>
+                <div class="prix"><b>Member ship pour 1 an </b></div>
+                <div class="description"><p>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès aux Networking</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès aux afterwork</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès aux Dîner (all in)</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Logo de votre société sur notre site avec redirection vers votre propre site</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Possibilité de mettre sa société en avant lors des événements, business lunchs, afterwork.</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès événements clubs business</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Annuaire des membres</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Remises professionnelles sur notre page membre</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Plateforme avantage</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Platinium pass - 1 invité par évènements + dîner</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès plate forme points évolution</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Mise en place d’un stand 6 fois par an</li>
+                </p></div>
+            </div>
+            <div class="formule">
+                <img src="{{asset('images/gold.png')}}" alt="image gold" id="gold">
+                <h3>Gold</h3>
+                <div class="prix"><b>Member ship pour 1 an </b></div>
+                <div class="description"><p>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès aux Networking</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès aux afterwork</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès aux Dîner (3x inclus)</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Logo de votre société sur notre site avec redirection vers votre propre site</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div></i>Possibilité de mettre sa société en avant lors des événements, business lunchs, afterwork.</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès événements clubs business</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Annuaire des membres</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Remises professionnelles sur notre page membre</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Plateforme avantage</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Gold pass - 1 invité par évènements</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Accès plate forme points évolution</li>
+                    <li><div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>Mise en place d’un stand 2 fois par an</li>
+                </p></div>
+            </div>
+        </div>
+        <div id="membersBtn">
+            <a href="#member"><button class="btn-dore">Demande d'admission</button></a>
+        </div>
+       
+    </div>
+
+    <div class="slide" id="slogan">
+        <div class="left">
+            <div class="cadre">
+                <h2>+ DE VISIBILITÉ</h2>
+                <p>Partenaires - Médias - Réseaux</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="cadre">
+                <h2>LA FORCE D'UN RÉSEAU</h2>
+                <p>Recommandations - Rencontres - Conseils - Mise en relation</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" id="member">
+        <div class="blockTitle">
+            <h2>Devenir membre</h2>
+            <div class="trait"></div>
+        </div>
+        <div class="memberText">
+            <p><b>Prestige Business Club</b> est un espace d'échange exceptionnel où les expériences, les contacts et les recommandations se côtoient. C'est ici que les affaires prospèrent dans une atmosphère empreinte <b>d'objectifs communs et de valeurs partagées.</b> Ce qui nous distingue des autres, c'est notre engagement envers l'échange d'expériences et le soutien mutuel entre les entreprises. Vous obtiendrez les <b>recommandations</b> dont vous avez besoin et vous rencontrerez des personnes inspirantes qui contribueront à la <b>croissance</b> de votre entreprise. En rejoignant notre club, vous développerez votre entreprise, tisserez des relations durables et perfectionnerez vos compétences, tout cela grâce à notre réseau dynamique.</p><br>
+            <p><b>L'adhésion</b> au Prestige Business Club est simple : remplissez notre formulaire d'adhésion, acquittez votre cotisation annuelle et recevez immédiatement votre <b>carte de membre</b>. Rejoignez une communauté d'entrepreneurs exceptionnels et créatifs, des acteurs du monde des affaires, de l'art, de la mode et de la diplomatie. Notre organisation a été créée dans le but de connecter les individus à travers les affaires et de les accompagner dans leurs succès. Nous organisons des événements de réseautage qui se distinguent par leur utilisation de connaissances pratiques éprouvées et d'activités synergiques spécifiquement conçues pour vous propulser vers de nouveaux sommets.</p><br>
+            <p>En tant que membre de notre club, nous vous aiderons à trouver des clients et des partenaires intéressés par vos produits et services, que ce soit à <b>l'échelle locale, nationale ou internationale</b>. Nous mettons tout en œuvre pour favoriser votre réussite, tant sur le plan microéconomique que macroéconomique. Rejoignez le Prestige Business Club et découvrez un monde où votre unicité est célébrée et où vos ambitions sont soutenues. <b>Ensemble, nous atteindrons de nouveaux sommets de succès et de prospérité.</b></p><br>
+            <a href="{{asset('files/prestige-formulaire.pdf')}}" download="prestige-formulaire.pdf"><button class="btn-dore">Demande d'admission</button></a>
+             
+        </div>
+        <div class="blockTitle deg1">
+            <h2>Nos membres</h2>
+            <div class="trait"></div>
+        </div>
+        <div class="sliderMarques">
+            <div class="contentSlider">
+
+            {% for marque in marques %}
+                <div class="sliderItem">
+                    <a href="{{marque.link}}" target="_blank"><img src="./uploads/{{marque.logo}}" alt="image de {{marque.brand}}" ></a>
+                </div>
+            {% endfor %}
+                
+            </div>
+            
+        </div>
+        <div class="iconScroll">
+            <img src={{asset('images/scrollIcon.png')}} alt="icone de scroll">
+        </div>
+    </div>
+
+    <div class="cookies">
+        <p><b>Ce site utilise des cookies</b></p>
+        <p>Nous utilisons des cookies pour assurer le bon fonctionnement du site web.</p>
+        <button class="btn-dore" id="btnCookies"><b>Accepter les cookies</b></button>
+    </div>
+
+    {% include "partials/footer.html.twig" %}
+{% endblock %}

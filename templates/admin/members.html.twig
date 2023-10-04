@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    {% include "/partials/header.html.twig" %}
+    <div class="slide" id="admin">
+       <h1>Administration - Membres</h1>
+        <a href="{{path('add_member')}}" class="adminBtn"><button class="btn-dore">Ajouter un membre</button></a>
+        
+        <div class="liste">
+        <div class="wrapper">
+           <table class='table' style="width: 100%">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nom</td>
+                    <td>Prénom</td>
+                    <td>Profession</td>
+                    <td>Email</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+            {% for membre in membres %}
+                 <tr>
+                    <td>{{membre.id}}</td>
+                    <td><a class="btn btn-danger"  href="{{path('member',{'id': membre.id})}}">{{membre.lastname}}</a></td>
+                    <td>{{membre.firstname}}</td>
+                    <td>{{membre.profession}}</td>
+                    <td>{{membre.email}}</td>
+                    <td>
+                        <a class="btn btn-danger"  href="{{path('admin_profile',{'id':membre.id})}}">Modifier</a>
+                        <a class="btn btn-danger"  href="{{path('admin_user_delete',{'id':membre.id})}}">Supprimer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+               
+            </tbody>
+        </table>
+        </div>
+        </div>
+    </div>
+    {% include "/partials/footer.html.twig" %}
+{% endblock %}

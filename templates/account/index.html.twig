@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    {% include "/partials/header.html.twig" %}
+    <div class="slide" id="connexion">
+        <div class="connexionContent">
+            <h1 style="text-align: center">Connexion</h1>
+            {# <a href="{{path('account_register')}}" ><button class="btn uploadBtn">Je n'ai pas de compte</button></a> #}
+
+        {% if hasError %}
+            <div class="alerte">
+                <p>Une erreur est survenue, le nom d'utilisateur ou le mot de passe est invalide</p>
+            </div>
+        {% endif %}
+
+        <form action="{{path('account_login')}}" method="POST">
+                    <div class="form-block">
+                        {# symfony veut un nom précis pour le login: _username #}
+                        <label for="email">Email</label><br>
+                        <input type="text" name="_username" id="email"  placeholder="Adresse email..." required value="{{ username }}">
+                    </div>
+                    <div class="form-block">
+                        {# symfony veut un nom précis pour le password: _password #}
+                        <label for="password">Mot de passe</label><br>
+                        <input type="password" name="_password" id="password" placeholder="Votre mot de passe" required>
+                    </div>
+                    <div class="form-block">
+                        <input class="btn" type="submit" value="Connexion">
+                    </div>
+            </form>
+        </div>
+        
+    
+    </div>
+    {% include "/partials/footer.html.twig" %}
+{% endblock %}

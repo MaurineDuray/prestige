@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    {% include "/partials/header.html.twig" %}
+    <div class="slide" id="connexion">
+
+                <h1>Agenda</h1>
+            
+        <div class="fond">
+        <div class="wrapper" id="agenda">
+        {% for event in events %}
+            <a href="{{path('event',{'id': event.id})}}">
+                <div class="card-agenda">
+                    <div class="card-agenda-date">
+                        {{ event.date | date("m") }}
+                    </div>
+                    <div class="card-agenda-img">
+                        {% if event.picture %}
+                            <img src="./uploads/{{event.picture}}" class="card-img img-fluid" alt="Image de couverture de l'évènement">
+                        {% else %}
+                            <img src="{{asset('images/champagne-toast.jpg')}}" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="card-agenda-title">
+                        {{event.title}}<br>
+                        <span class="date">{{event.date | date("d-m-Y")}}</span>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+             </div>
+        </div>
+    </div>
+    {% include "/partials/footer.html.twig" %}
+{% endblock %}

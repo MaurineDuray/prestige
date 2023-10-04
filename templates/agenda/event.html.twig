@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    {% include "/partials/header.html.twig" %}
+    <div class="slide" id="connexion">
+        <h1>Agenda</h1>
+        <a href="{{path('agenda')}}"><button class="btn-dore">Retour à l'agenda</button></a>
+        <div class="fond">
+            
+            <div class="wrapper" id="event">
+            <div class="left">
+                <div class="card-agenda">
+                        <div class="card-agenda-date">
+                            {{ event.date | date("m") }}
+                        </div>
+                        <div class="card-agenda-img">
+                            {% if event.picture %}
+                                <img src="./uploads/{{event.picture}}" class="card-img img-fluid" alt="Image de couverture de l'évènement">
+                            {% else %}
+                                <img src="{{asset('images/champagne-toast.jpg')}}" alt="">
+                            {% endif %}
+                        </div>
+                        <div class="card-agenda-title">
+                            {{event.title}}<br>
+                            <span class="date">{{event.date | date("m-d-Y")}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <p> <h3>{{event.title}}</h3></p>
+                    <p> <u>Date :</u><br>{{event.date | date("d-m-Y")}}</p>
+                    <p> <u>Informations pratiques :</u> <br>{{event.infos| nl2br}}</p>
+                    <p> <u>Description: </u><br>{{event.description | nl2br }}</p>
+                </div>
+            </div>
+           
+
+            </div>
+        </div>
+    </div>
+    {% include "/partials/footer.html.twig" %}
+{% endblock %}

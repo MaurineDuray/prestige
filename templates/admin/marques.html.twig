@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    {% include "/partials/header.html.twig" %}
+    <div class="slide" id="admin">
+        <h1>Administration - Marques</h1>
+        <a href="{{path('add_marque')}}" class="adminBtn"><button class="btn-dore">Ajouter une marque</button></a>
+        
+        <div class="liste">
+        <div class="wrapper">
+           <table class='table' style="width: 100%">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nom</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+            {% for marque in marques %}
+                 <tr>
+                    <td>{{marque.id}}</td>
+                    <td>{{marque.brand}}</td>
+                    <td>
+                        <a class="btn btn-danger"  href="{{path('admin_marque_delete',{'id':marque.id})}}">Supprimer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+               
+            </tbody>
+        </table>
+        </div>
+        </div>
+    </div>
+    {% include "/partials/footer.html.twig" %}
+{% endblock %}

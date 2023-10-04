@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editer l'évènement{% endblock %}
+
+{% block body %}
+    {% include "/partials/header.html.twig" %}
+    <div class="slide" id="admin">
+        <h1>Administration - Events</h1>
+        <a href="{{path('admin_events')}}"><button class="btn-dore">Retour aux events </button></a>
+        <div class="liste">
+          {{form_start(myform)}}
+            <div class="container" style="background-color:  rgba(255, 170, 22, 0.1); padding: 20px; border-radius: 20px;">
+                <div>
+                    
+                    {{form_widget(myform)}}
+
+                </div>
+                <button type="submit" class="btn-dore"><i class="fa-solid fa-check"></i> Modifier l'évènement</button>
+            </div>
+            
+        {{form_end(myform)}}
+        </div>
+    </div>
+    {% include "/partials/footer.html.twig" %}
+{% endblock %}

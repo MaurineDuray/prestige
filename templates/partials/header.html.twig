@@ -1,0 +1,62 @@
+{% block body %}
+    <nav>
+        <div id="logo">
+            <img src={{asset('images/logo-menu.png')}} alt="logo prestige">
+        </div>
+        <div class="menuContent">
+            <ul>
+                <li><a href="{{path("homepage")}}#home">Accueil</a></li>
+                <li><a href="{{path("homepage")}}#about">Le club</a></li>
+                <li><a href="{{path("homepage")}}#targetMissions">Nos rôles</a></li>
+                <li><a href="{{path("homepage")}}#formules">Les cotisations</a></li>
+                <li><a href="{{path("homepage")}}#footer">Contact</a></li>
+            </ul>
+            <div id="burger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div id="myaccount">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+            </div>
+        </div>
+    </nav>
+
+    <div id="menuResponsive">
+       
+        <ul>
+            <li><a href="{{path("homepage")}}#home">Accueil</a></li>
+            <li><a href="{{path("homepage")}}#about">Le club</a></li>
+            <li><a href="{{path("homepage")}}#targetMissions">Nos rôles</a></li>
+            <li><a href="{{path("homepage")}}#formules">Les cotisations</a></li>
+            <li><a href="{{path("homepage")}}#footer">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <div class="accountBlock">
+        {% if app.user %}
+            <p>Bienvenue <b>{{app.user.lastname}}-{{app.user.firstname}}</b>,</p>
+            <ul>
+                <li><a href="{{path('profile')}}">Mon espace compte</a></li>
+                <li><a href="{{path('members')}}">Nos membres</a></li>
+                <li><a href="{{path('agenda')}}">Agenda</a></li>
+                {% if app.user.roles[0] == "ROLE_ADMIN" %}
+                <li><a href="{{path('admin')}}">Administration</a></li>
+                {% endif %}
+                <li><a href="{{path('account_logout')}}">Déconnexion</a></li>
+            </ul>
+        {% else %}
+           
+        <ul>
+            <li><a href="{{path('account_login')}}">Connexion</a></li>   
+        </ul>
+        {% endif %}
+        
+    </div>
+{% endblock %}
+
+
+{% block javascripts %}
+    {{encore_entry_script_tags('menu')}}
+{% endblock %}

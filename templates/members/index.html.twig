@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    {% include "/partials/header.html.twig" %}
+    <div class="slide" id="connexion">
+
+                <h1>Nos membres</h1>
+                
+        <div class="fond" id="fondMembers">
+            <div class="search"></div>
+            <div class="memberContent">
+                {% for member in members %}
+                    <div class="member-card">
+                        <div class="member-card-img">
+                            <img src="./uploads/{{member.avatar}}" class="card-img img-fluid" alt="" >
+                        </div>
+                        <div class="memberInfos">
+                            <a href="{{path('member',{'id': member.id})}}"><p>{{member.lastname}} | {{member.firstname}}</p></a>
+                            <p>{{member.profession}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                   
+            </div>
+        </div>
+    </div>
+    {% include "/partials/footer.html.twig" %}
+{% endblock %}

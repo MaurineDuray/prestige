@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    {% include "/partials/header.html.twig" %}
+    <div class="slide" id="connexion">
+
+        <h1>Espace membre</h1> 
+        <a href="{{path('members')}}"><button class="btn-dore">Retour à la liste de membres</button></a>
+        
+        <div class="fond">
+            <h1>Profil de {{member.email}}</h1>
+            
+            <div class="profileContent">
+                <div class="left">
+                    <div class="profile">
+                        <img src="./uploads/{{member.avatar}}" class="card-img img-fluid" alt="Avatar du membre" >
+                    </div>
+                </div>
+                <div class="right">
+                    <p id="lastname"><u>Nom:</u> <br> {{member.lastname}}</p>
+                    <p id="firstname"><u>Prénom:</u> <br>{{member.firstname}}</p>
+                    <p id="entreprise"><u>Entreprise:</u>{{member.entreprise}} <br> </p>
+                    <p id="entrepriselogo">
+                        <img src="./uploads/{{member.logo}}" class="card-img img-fluid" alt="Logo de l'entreprise" > 
+                    </p>
+                    <p id="profession"><u>Profession:</u> <br>{{member.profession}}</p>
+                    <p id="email"><u>E-mail: </u><br>{{member.email}}</p>
+                    <p id="phone"><u>Numéro de téléphone:</u> <br>{{member.phone}}</p>
+                    <p id="address"><u> Addresse: </u><br>{{member.street}}</p>
+                    <p id="address">{{member.zipcode}} - {{member.city}}</p>
+                    <p id="tva"><u>Numéro de TVA:</u> <br>{{member.tva}}</p>
+                    <p id="link"><u>Site web:</u> <br><a href="{{member.link}}">Visiter le site</a></p>
+                    {% if member.description %}
+                        <p id="description">Description: {{member.description}}</p>
+                    {% endif %}
+                </div>
+            </div>
+           
+        </div>
+       
+    
+    </div>
+    {% include "/partials/footer.html.twig" %}
+{% endblock %}

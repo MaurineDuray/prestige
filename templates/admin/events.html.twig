@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    {% include "/partials/header.html.twig" %}
+    <div class="slide" id="admin">
+        <h1>Administration - Agenda</h1>
+        <a href="{{path('add_events')}}" class="adminBtn"><button class="btn-dore">Ajouter un event</button></a>
+        
+        <div class="liste">
+        <div class="wrapper">
+           <table class='table' style="width: 100%">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Event</td>
+                    <td>Date</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+            {% for event in events %}
+                 <tr>
+                    <td>{{event.id}}</td>
+                    <td>{{event.title}}</td>
+                    <td>{{event.date |date('d-m-Y')}}</td>
+                    <td>
+                        <a class="btn btn-danger"  href="{{path('admin_event_delete', {'id':event.id})}}">Supprimer</a>
+                        <a class="btn btn-danger"  href="{{path('admin_event',{'id': event.id})}}">Modifier</a>
+                    </td>
+                </tr>
+            {% endfor %}
+               
+            </tbody>
+        </table>
+        </div>
+        </div>
+    </div>
+    {% include "/partials/footer.html.twig" %}
+{% endblock %}

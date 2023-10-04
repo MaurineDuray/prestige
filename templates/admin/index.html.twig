@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    {% include "/partials/header.html.twig" %}
+    <div class="slide" id="admin">
+        <h1>Administration</h1>
+        <div class="fond">
+            <a href="{{path('admin_membres')}}"><button class="btn-dore">Membres</button></a>
+            <a href="{{path('admin_marques')}}"><button class="btn-dore">Marques</button></a>
+            <a href="{{path('admin_events')}}"><button class="btn-dore">Agenda</button></a>
+        </div>
+    </div>
+    {% include "/partials/footer.html.twig" %}
+{% endblock %}

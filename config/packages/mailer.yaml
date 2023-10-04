@@ -1,0 +1,4 @@
+framework:
+    mailer:
+        dsn: 'smtp://ydbu3020:pZKq-LNAG-agV?@buffon.o2switch.net:465?encryption=tls'
+        #dsn: '%env(MAILER_DSN)%'

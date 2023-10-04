@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    {% include "/partials/header.html.twig" %}
+    <div class="slide" id="connexion">
+            {% if app.user.id == user.id %}
+                <h1>Mon espace compte</h1>
+            {% else %}
+                <h1>Profil</h1>
+            {% endif %}
+            
+        <div class="fond">
+            
+            {% if app.user.id == user.id %}
+                <h3>Bienvenue {{app.user.email}}</h3>
+            {% else %}
+                <h1>Profil de {{user.email}}</h1>
+            {% endif %}
+
+           
+            <div class="profileContent">
+                <div class="left">
+                    <div class="profile">
+                        <img src="./uploads/{{user.avatar}}" class="card-img img-fluid" alt="Avatar du membre" >
+                    </div>
+                </div>
+                <div class="right">
+                    <p id="lastname"><u>Nom:</u> <br> {{user.lastname}}</p>
+                    <p id="firstname"><u>Prénom:</u> <br>{{user.firstname}}</p>
+                    <p id="entreprise"><u>Entreprise:</u>{{user.entreprise}} <br> </p>
+                    <p id="entrepriselogo">
+                        <img src="./uploads/{{user.logo}}" class="card-img img-fluid" alt="Logo de l'entreprise" > 
+                    </p>
+                    <p id="profession"><u>Profession:</u> <br>{{user.profession}}</p>
+                    <p id="email"><u>E-mail: </u><br>{{user.email}}</p>
+                    <p id="phone"><u>Numéro de téléphone:</u> <br>{{user.phone}}</p>
+                    <p id="address"><u> Addresse: </u><br>{{user.street}}</p>
+                    <p id="address">{{user.zipcode}} - {{user.city}}</p>
+                    <p id="tva"><u>Numéro de TVA:</u> <br>{{user.tva}}</p>
+                    <p id="link"><u>Site web:</u> <br><a href="{{user.link}}">Visiter le site</a></p>
+                    {% if user.description %}
+                        <p id="description">Description: {{user.description}}</p>
+                    {% endif %}
+                </div>
+            </div>
+             <div class="buttons">
+                <a href="{{path('account_password')}}"><button class="btn-dore">Changer mon mot de passe</button></a>
+                <a href="{{path('account_profile')}}"><button class="btn-dore">Editer mes informations</button></a>
+                <a href="{{path('account_modifimg')}}"><button class="btn-dore">Editer l'avatar</button></a>
+                <a href="{{path('account_logomodify')}}"><button class="btn-dore">Editer le logo</button></a>
+            </div>
+        </div>
+       
+           
+    </div>
+    {% include "/partials/footer.html.twig" %}
+{% endblock %}

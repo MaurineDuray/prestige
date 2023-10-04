@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Prestige Business Club{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/jpg" href="../../favicon.ico"/>
+        <meta name="application-name" content="Prestige Business Club">
+        <meta property="og:title" content="Prestige Business Club">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="./favicon.ico">
+        <meta property="og:image:width" content="1800">
+        <meta property="og:image:height" content="945">
+        <meta property="og:url" content="https://prestigebusinessclub.be/">
+        <meta property="og:description" content="Prestige Business Club"> 
+        <meta property="og:locale" content="fr_FR">
+        <meta property="og:site_name" content="Prestige Business Club">
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
