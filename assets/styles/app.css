@@ -61,19 +61,20 @@ a{
 button{
     font-family: caviar !important;
     cursor: pointer;
+    
 }
 .wrapper{
     width: 80%;
     margin: 0 auto;
 }
 .btn-dore{
-    background-color: #FFE79F;
+    background-color: #FFE79F !important;
     padding: 15px;
     border-radius: 10px;
     border: none;
     box-sizing: border-box;
     margin: 5px;
-
+    color: #271803 !important;
 }
 .trait{
     width: 10%;
