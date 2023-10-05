@@ -30,8 +30,11 @@
                     <td>{{membre.profession}}</td>
                     <td>{{membre.email}}</td>
                     <td>
+                        
                         <a class="btn btn-danger"  href="{{path('admin_profile',{'id':membre.id})}}">Modifier</a>
+                        {% if (membre.id != 1) or (membre.roles[0]!="ROLE_ADMIN") %}
                         <a class="btn btn-danger"  href="{{path('admin_user_delete',{'id':membre.id})}}">Supprimer</a>
+                        {% endif %}
                     </td>
                 </tr>
             {% endfor %}

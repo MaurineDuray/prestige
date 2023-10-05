@@ -125,18 +125,19 @@ class AccountController extends AbstractController
             $member->setPassword($hash);
 
             $password= "User";
-            // mail send
-            $email = (new TemplatedEmail())
-            ->from('site@prestigebusinessclub.be')
-            ->to($member->getEmail())
-            ->subject('Inscription Prestige Business Club')
-            ->htmlTemplate('mails/registration.html.twig')
-            ->context([
-                'user'=>$member,
-                'password'=>$password
-            ]);
 
-            $mailer->send($email);
+            // mail send
+            // $email = (new TemplatedEmail())
+            // ->from('site@prestigebusinessclub.be')
+            // ->to($member->getEmail())
+            // ->subject('Inscription Prestige Business Club')
+            // ->htmlTemplate('mails/registration.html.twig')
+            // ->context([
+            //     'user'=>$member,
+            //     'password'=>$password
+            // ]);
+
+            // $mailer->send($email);
 
             $manager->persist($member);
             $manager->flush();
