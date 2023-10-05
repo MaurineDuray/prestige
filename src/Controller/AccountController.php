@@ -127,7 +127,7 @@ class AccountController extends AbstractController
             $password= "User";
             // mail send
             $email = (new TemplatedEmail())
-            ->from('site@prestigebusiness.be')
+            ->from('site@prestigebusinessclub.be')
             ->to($member->getEmail())
             ->subject('Inscription Prestige Business Club')
             ->htmlTemplate('mails/registration.html.twig')
