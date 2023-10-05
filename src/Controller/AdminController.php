@@ -24,6 +24,7 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 class AdminController extends AbstractController
 {
     #[Route('/admin', name: 'admin')]
+    #[IsGranted("ROLE_ADMIN")]
     public function index(): Response
     {
         return $this->render('admin/index.html.twig', [
@@ -32,6 +33,7 @@ class AdminController extends AbstractController
     }
 
     #[Route('/admin/members', name: 'admin_membres')]
+    #[IsGranted("ROLE_ADMIN")]
     public function members_admin(UserRepository $repo): Response
     {
         $membres = $repo->findAll();
@@ -41,6 +43,7 @@ class AdminController extends AbstractController
     }
 
     #[Route('/admin/marques', name: 'admin_marques')]
+    #[IsGranted("ROLE_ADMIN")]
     public function members_marques(MarquesRepository $repo): Response
     {
         $marques = $repo->findAll();
